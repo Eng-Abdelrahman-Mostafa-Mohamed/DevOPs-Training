@@ -28,13 +28,12 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/hello")
-def hello():
-    return {"message": "hello"}
+@app.get("/")
+async def root():
+    return {"message": "Hello from devops-training!"}
+    
+    
 
-@app.get("/add")
-def add(a: int, b: int):
-    return {"result": a + b}
 ```
 
 ---
